@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Save state
-      run: echo "::save-state"
+      run: echo "{name}={value}" >> $GITHUB_STATE
     - uses: actions/checkout@master
     - name: build a push to docker
       uses: docker/build-push-action@v2
